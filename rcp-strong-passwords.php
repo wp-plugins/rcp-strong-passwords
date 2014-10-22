@@ -4,7 +4,7 @@
  Description: Forces users to register with strong passwords
  Author: Pippin Williamson
  Contributors: mordauk
- Version: 1.0
+ Version: 1.0.1
 */
 
 class RCP_Strong_Passwords {
@@ -29,6 +29,11 @@ class RCP_Strong_Passwords {
 	 * @return	void
 	 */
 	public function check_password( $data ) {
+
+		if( is_user_logged_in() ) {
+			return;
+		}
+
 		if ( $this->password_strength( $data['rcp_user_pass'], $data['rcp_user_login'] ) != 4 ) {
 			rcp_errors()->add( 'weak_password', __( 'Please use a strong password', 'rcp' ), 'register' );
 		}

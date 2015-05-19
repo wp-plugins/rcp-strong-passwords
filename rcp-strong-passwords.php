@@ -71,7 +71,4 @@ class RCP_Strong_Passwords {
 	}
 
 }
-
-if( ! is_admin() ) {
-	$rcp_strong_passwords = new RCP_Strong_Passwords;
-}
+$rcp_strong_passwords = new RCP_Strong_Passwords;

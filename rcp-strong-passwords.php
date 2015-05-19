@@ -4,7 +4,7 @@
  Description: Forces users to register with strong passwords
  Author: Pippin Williamson
  Contributors: mordauk
- Version: 1.0.1
+ Version: 1.0.2
 */
 
 class RCP_Strong_Passwords {
